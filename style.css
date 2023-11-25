@@ -6,6 +6,31 @@
 }
 body {
     background-color: #fff;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+a {
+    text-decoration: none;
+    color: white;
 }
 .top {
     background-image: url(./images/desktop/image-hero.jpg);
@@ -259,6 +284,9 @@ footer {
         }
     }
 }
+.menu {
+    display: none;
+}
 
 
 
@@ -267,28 +295,83 @@ footer {
     body {
         background-color: #fff;
         font-size: 16px; /* Set a base font size for better responsiveness */
+        animation: none;
     }
     
     .top {
         background-image: url(./images/mobile/image-hero.jpg);
-        height: 200px; /* Adjust the height for mobile */
+        height: 400px; /* Adjust the height for mobile */
         background-size: cover;
         text-align: center; /* Center align text in mobile view */
         padding: 20px;
+        display: grid;
+        gap: 10px;
     }
     
     .top h1 {
-        font-size: 20px; /* Adjust font size for mobile */
-        width: auto;
-        margin: 0;
+        font-size: 30px; /* Adjust font size for mobile */
+        width: 95%;
+        margin-left: 2.5%;
+        height: 70%;
+        margin-right: 20px;
+        margin-bottom: 70px;
     }
+    .logo {
+        width: 100%;
+    & img {
+        margin-top: 30px;
+        width: 130px;
+    }
+}
     
     .nav {
-        margin-left: 20px; /* Adjust margin for mobile */
-        margin-top: 10px; /* Adjust margin for mobile */
         display: flex;
-        flex-direction: column; /* Stack items vertically in mobile view */
-        gap: 10px;
+        gap: 23%;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        width: 94%;
+        margin-left: 5px;
+        height: 100%;
+      & ul {
+        display: none;
+      }
+      & .menu {
+            display: block;
+            border: none;
+            background: none;
+            margin-bottom: 10px;
+                & img {
+                    width: 65px;
+                    height: 30px;
+                    padding-right: 30px;
+                    background: none;
+                }
+      }
+      .ul {
+        display: grid;
+        gap: 15px;
+        position: absolute;
+        height: 40%;
+        width: 100%;
+        text-align: center;
+        margin-top: 20%;
+        margin-left: -64.6%;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: hsl(0, 0%, 0%);
+        animation: fadeIn2 2s ease-in-out forwards;
+        & a {
+            font-size: 32px;
+            text-align: initial;
+            text-decoration: none;
+            color: hsl(0, 0%, 55%);
+            
+        }
+        & li {
+            text-align: center;
+            list-style: none;
+        }
+      }
     }
     
     .nav li {
